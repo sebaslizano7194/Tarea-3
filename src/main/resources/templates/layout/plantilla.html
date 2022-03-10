@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Dashboard</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <header>
+            <a href="#" id="logo" target="_blank"><img id="logostyle" src="desarrollo-game.png" alt=""/></a>
+            <label for="toggle-1" class="toggle-menu"><ul><li></li> <li></li> <li></li></ul></label>
+            <input type="checkbox" id="toggle-1">
+        </header>
+        
+        
+        <footer th:fragment="footer">
+            <p>&COPY Derechos Reservados 2022</p>
+        </footer>
+    </body>
+</html>
+
+    <!<!--
+    
+    <head>
+        <title>Gameshop</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+    </head>
+
+    <body>
+        <header th:fragment="header">
+
+            <nav id="navbar">
+                <a href="#">Inicio</a>
+                <a href="@{/mostrarCatalogo}">Productos</a>
+                <a href="@{/nuevoJuego}">Agregar Productos</a>
+                <a href="#">Contactenos</a>
+        </header>
+    </body>
+     -->
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html  xmlns:th="http://www.thymeleaf.org"
+       xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="../static/style.css" rel="stylesheet" type="text/css"/>
+            <link href="../static/CSS.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body class="BodyCSS" style="background-color: rgb(26,188,156);">
+        
+        <table border="1">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Genero</th>
+                        <th>Empresa</th>
+                        <th>Plataforma</th>
+                        <th>Num jugadores</th>
+                        <th>Eliminar</th>
+                        <th>Modificar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="videojuego :${videojuegos}">
+                        <td th:text="${videojuego.nombre}"></td>
+                        <td th:text="${videojuego.genero}"></td>
+                        <td th:text="${videojuego.empresa}"></td>
+                        <td th:text="${videojuego.plataforma}"></td>
+                        <td th:text="${videojuego.numjugadores}"></td>
+                        <td><a th:href="@{/eliminarJuego/} + ${videojuego.idjuego}">Eliminar</a>
+                        <td><a th:href="@{/modificarJuego/} + ${videojuego.idjuego}">Modificar</a></td>
+                        
+                    </tr>
+                    <a th:href="@{/}">Regresar</a>
+                </tbody>
+        
+            </table>
+        
+        <footer th:replace="layout/plantilla :: footer"></footer>
+    </body>
+</html>

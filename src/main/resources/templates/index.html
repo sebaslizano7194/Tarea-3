@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Dashboard</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+        
+    </head>
+    <body>
+        <header>
+            <a href="#" id="logo" target="_blank"><img id="logostyle" src="desarrollo-game.png" alt=""/></a>
+            <label for="toggle-1" class="toggle-menu"><ul><li></li> <li></li> <li></li></ul></label>
+            <input type="checkbox" id="toggle-1">
+            <nav>
+            <ul>
+            <li><a href=""><i class="icon-home"></i>Inicio</a></li>
+            <li><a th:href="@{/mostrarCatalogo}"><i class="icon-user"></i>Productos</a></li>
+            <li><a th:href="@{/nuevoJuego}"><i class="icon-thumbs-up-alt"></i>Agregar productos</a></li>
+            <li><a th:href="@{/Contactanos}"><i class="icon-gear"></i>Contactenos</a></li>
+            </ul>
+            </nav>
+        </header>
+        <section>
+            <h1>Su mejor tienda de videojuegos en Costa Rica!</h1>
+            <img src="9957aa036508916789fd952ffbb19670.gif" alt="" style="width: 200px; height: 200px"/>
+
+        </section>
+        
+        <footer th:replace="layout/plantilla :: footer"></footer>
+    </body>
+</html>
+
+<!--  
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Gameshop</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <header>
+            
+            <nav id="navbar">
+                <a href="/">Inicio</a>
+                <a href="@{/mostrarCatalogo}">Productos</a>
+                <a href="@{/nuevoJuego}">Agregar Productos</a>
+                <a href="/">Contactenos</a>
+                    <h1>Bienvenidos</h1>
+                    <br>
+                    <h3>Los mejores juegos del 2022</h3>
+                </div>
+            </nav>   
+        </header>
+    </body>
+</html>
+-->

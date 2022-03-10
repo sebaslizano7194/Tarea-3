@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Contactanos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../static/CSS.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body class="BodyCSS" style="background-color: rgb(26,188,156);">
+        <h1>Contactanos</h1>
+        <br>
+        <h2>Ponte en contacto con nosotros llenando este formulario: </h2>
+        
+        <form>
+                
+                <label>Nombre:  </label><input type="text" style="height:20px">
+                <br>
+                <br>
+                <label>E-mail:  </label><input type="text" name="email" placeholder="Digite su email"> 
+                <br>
+                <br>
+                <label>Ingrese su pregunta:  </label>
+                <br>
+                <textarea name="Pregunta" rows="3" cols="7" style="width: 617px; height: 168px;"></textarea>
+                <br>
+                <br>
+                <input type="reset" value="Limpiar" />
+                <input type="submit" value="Enviar" />
+            </form>
+            
+            <h2 style="color: Black; font-family: Verdana, sans-serif; font-size: 30px">
+                    Siguenos en nuestras redes!
+                </h2>
+            
+            <a href="https://www.facebook.com/">
+                <img src="FB.png" alt="" style="width: 40px; height: 40px"/>
+            </a>
+            <a href="https://twitter.com/home">
+                <img src="TW.png" alt="" style="width: 40px; height: 40px"/>
+            </a>
+            <a href="https://www.instagram.com/?hl=es">
+                <img src="IG.png" alt="" style="width: 40px; height: 40px"/>
+            </a>
+        <br>
+        <a th:href="@{/}">Regresar</a>
+        
+        <footer th:replace="layout/plantilla :: footer"></footer>
+    </body>
+</html>
